@@ -28,6 +28,12 @@
 <h1>CPU Pinning Helper</h1>
 <br>
 
+<small class="col">
+    <code># one-liner</code>
+    <code>curl -X POST -F "vcpu=$CORES" -F "lscpu=`lscpu -p`" https://passthroughtools.org/api/v1/cpupin/</code>
+</small>
+<br>
+
 <form class="col" method="post" action="/api/v1/cpupin/">
     <div class="col">
         <label for="vcpu">Number of virtual CPUs to configure</label>
