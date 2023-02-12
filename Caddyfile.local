@@ -1,0 +1,11 @@
+http://localhost:8000 {
+	root * public
+	file_server
+	encode gzip
+
+	redir / /cpupin/
+
+	handle_path /api/* {
+		reverse_proxy localhost:8002
+	}
+}

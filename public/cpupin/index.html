@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <title>CPU Pinning Helper</title>
+
+    <style>
+        body {
+            background-color: rgb(28, 30, 34);
+            color: rgb(170, 170, 170);
+        }
+
+        .col {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form.col > div {
+            padding: 8px;
+        }
+
+        form.col > div.col > label, input, small {
+            padding: 4px;
+        }
+
+        form.col > div.col >
+    </style>
+</head>
+<body class="col">
+<h1>CPU Pinning Helper</h1>
+<br>
+
+<form class="col" method="post" action="/api/v1/cpupin/">
+    <div class="col">
+        <label for="vcpu">Number of virtual CPUs to configure</label>
+        <input type="number" id="vcpu" name="vcpu">
+        <small>For example, if you have a 6-Core 12-Thread CPU and want to pass 4 cores/8 threads then enter 8 here. The
+            topology will be detected from lscpu below.</small>
+    </div>
+
+    <div class="col">
+        <label for="lscpu">lscpu -p Output</label>
+        <textarea id="lscpu" name="lscpu" rows="16"></textarea>
+    </div>
+
+    <div class="col">
+        <input type="submit" value="Submit">
+    </div>
+</form>
+
+<br>
+<br>
+
+<em>original source, unknown. re-created. <a href="https://github.com/thewisenerd/passthroughtools" target="_blank">source</a>.</em>
+
+</body>
+</html>

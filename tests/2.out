@@ -1,0 +1,15 @@
+  <vcpu placement='static'>8</vcpu>
+  <cputune>
+    <vcpupin vcpu='0' cpuset='56'/>
+    <vcpupin vcpu='1' cpuset='57'/>
+    <vcpupin vcpu='2' cpuset='58'/>
+    <vcpupin vcpu='3' cpuset='59'/>
+    <vcpupin vcpu='4' cpuset='60'/>
+    <vcpupin vcpu='5' cpuset='61'/>
+    <vcpupin vcpu='6' cpuset='62'/>
+    <vcpupin vcpu='7' cpuset='63'/>
+  </cputune>
+  <cpu mode='host-passthrough' check='none'>
+    <topology sockets='1' cores='8' threads='1'/>
+    <cache mode='passthrough'/>
+  </cpu>
