@@ -133,6 +133,7 @@ func FormatSuggestion(suggestion *[]CpuLine) (*string, error) {
 	sb += fmt.Sprintf("%s<cputune>\n", padding)
 
 	// TODO: iffy.. should add a couple validations here.
+	//       when core values repeat over node+socket, this will break.
 	var socketMap = make(map[int]int)
 	var coreMap = make(map[int]int)
 
