@@ -101,10 +101,10 @@ func lineWeight(line CpuLine) uint64 {
 // Suggest TODO: use structured inputs
 func Suggest(lscpu string, vcpu int) (*[]CpuLine, error) {
 	topology, err := parse(lscpu)
-	topologyLen := len(*topology)
 	if err != nil {
 		return nil, err
 	}
+	topologyLen := len(*topology)
 	fmt.Printf("got topology=%v\n", topology)
 
 	if vcpu > topologyLen {
